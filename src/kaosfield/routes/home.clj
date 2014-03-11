@@ -5,7 +5,7 @@
 
 (defn home-page []
   (layout/render
-    "home.html" {:content (util/md->html "/md/docs.md")}))
+    "home.html" {:content "<h2>profile</h2>"}))
 
 (defn about-page []
   (layout/render "about.html"))
