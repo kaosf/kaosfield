@@ -1,7 +1,7 @@
 (defproject kaosfield "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
-  :dependencies [[org.clojure/clojure "1.5.1"]
+  :dependencies [[org.clojure/clojure "1.6.0-RC1"]
                  [lib-noir "0.8.0"]
                  [compojure "1.1.6"]
                  [ring-server "0.3.1"]
