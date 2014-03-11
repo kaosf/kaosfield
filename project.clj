@@ -9,7 +9,8 @@
                  [com.taoensso/timbre "3.0.0"]
                  [com.taoensso/tower "2.0.1"]
                  [markdown-clj "0.9.41"]
-                 [environ "0.4.0"]]
+                 [environ "0.4.0"]
+                 [hiccup "1.0.5"]]
 
   :repl-options {:init-ns kaosfield.repl}
   :plugins [[lein-ring "0.8.10"]
