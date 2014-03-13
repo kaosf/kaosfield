@@ -15,7 +15,8 @@
             :style "border-radius: 15px"}]]
     [:ul
      [:li "name: ka (か)"]
-     [:li "email: "]
+     [:li "email: "
+      [:img {:src "/img/mail.png"}]]
      [:li "birthday: 1986-11-21"]]
     [:h2 "personal links"]
     [:ul
