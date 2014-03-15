@@ -6,9 +6,5 @@
 
 (jade/configure {:template-dir "resources/public/jade/"})
 
-(defn about-page []
-  (layout/render "about.html"))
-
 (defroutes home-routes
-  (GET "/" [] (jade/render "index.jade" {}))
-  (GET "/about" [] (about-page)))
+  (GET "/" [] (jade/render "index.jade" {})))
