@@ -7,4 +7,5 @@
 (jade/configure {:template-dir "src/kaosfield/views/"})
 
 (defroutes home-routes
-  (GET "/" [] (jade/render "index.jade" {})))
+  (GET "/" [] (jade/render "index.jade" {}))
+  (GET "/log" [] (jade/render "log/index.jade" {})))
