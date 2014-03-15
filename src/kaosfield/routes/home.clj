@@ -4,7 +4,7 @@
             [kaosfield.util :as util]
             [clj-jade.core :as jade]))
 
-(jade/configure {:template-dir "resources/public/jade/"})
+(jade/configure {:template-dir "src/kaosfield/views/"})
 
 (defroutes home-routes
   (GET "/" [] (jade/render "index.jade" {})))
