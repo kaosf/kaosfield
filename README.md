@@ -1,19 +1,14 @@
 # kaosfield
 
-FIXME
+My homepage powered by Clojure.
 
-## Prerequisites
+[kaosfield.net](http://kaosfield.net)
 
-You will need [Leiningen][1] 2.0 or above installed.
-
-[1]: https://github.com/technomancy/leiningen
-
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
+[Hosted on Heroku](http://ka-ring.herokuapp.com)
 
 ## License
 
-Copyright © 2014 FIXME
+* Program sources: [MIT](http://opensource.org/licenses/MIT)
+* Documents: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Copyright (C) 2014 ka
