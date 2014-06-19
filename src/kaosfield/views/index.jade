@@ -9,7 +9,10 @@ block content
   ul
     li name: ka (か)
     li email: 
-      img(src="/img/mail.png")
+      span#email
+        span(onclick="javascript:decode();", style="text-decoration: underline") Click here to show the Email address
+        |  or 
+        a(href="/img/mail.png") show the image
     li birthday: 1986-11-21
 
   h2 personal links
@@ -85,3 +88,20 @@ block content
       | Source code is 
       a(href="https://github.com/kaosf/homepage-powered-by-ring") here
       | .
+
+  script(src='http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js')
+  script.
+    var secretPassphrase = "7b1fae65e063ceab3ebf8298d925a596ea1816cb";
+    var encryptedString = "U2FsdGVkX1/pr3UXR7IldO2CJJ6XVj1JyiH7VFse4N8nlr3eZgBmLcFwTUB4W1zL";
+    var emailAddress = CryptoJS.AES.decrypt(encryptedString, secretPassphrase).toString(CryptoJS.enc.Utf8);
+    var decoded = false;
+    function decode() {
+      if (!decoded) {
+        var span = document.getElementById("email");
+        var li = span.parentNode;
+        li.insertBefore(document.createTextNode(emailAddress), span);
+        li.removeChild(span);
+        decoded = true;
+      }
+    }
+    window.onload = function() { decode(); };
