@@ -3,7 +3,7 @@
   :url "http://ka-ring.herokuapp.com"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [lib-noir "0.8.0"]
-                 [compojure "1.1.7"]
+                 [compojure "1.1.8"]
                  [ring-server "0.3.1"]
                  [selmer "0.5.9"]
                  [com.taoensso/timbre "3.0.0"]
