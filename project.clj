@@ -1,6 +1,6 @@
-(defproject kaosfield "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject kaosfield "0.1.0"
+  :description "kaosfield.net"
+  :url "http://ka-ring.herokuapp.com"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [lib-noir "0.8.0"]
                  [compojure "1.1.6"]
