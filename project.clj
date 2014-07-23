@@ -2,7 +2,7 @@
   :description "kaosfield.net"
   :url "http://ka-ring.herokuapp.com"
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [lib-noir "0.8.0"]
+                 [lib-noir "0.8.4"]
                  [compojure "1.1.8"]
                  [ring-server "0.3.1"]
                  [selmer "0.5.9"]
