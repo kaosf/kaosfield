@@ -9,12 +9,12 @@
                  [com.taoensso/timbre "3.0.0"]
                  [com.taoensso/tower "2.0.1"]
                  [markdown-clj "0.9.41"]
-                 [environ "0.4.0"]
+                 [environ "0.5.0"]
                  [clj-jade "0.1.4"]]
 
   :repl-options {:init-ns kaosfield.repl}
   :plugins [[lein-ring "0.8.10"]
-            [lein-environ "0.4.0"]]
+            [lein-environ "0.5.0"]]
   :ring {:handler kaosfield.handler/app
          :init    kaosfield.handler/init
          :destroy kaosfield.handler/destroy}
