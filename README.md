@@ -2,7 +2,7 @@
 
 My homepage powered by Clojure.
 
-[kaosfield.net](http://kaosfield.net)
+[kaosfield](http://www.kaosfield.net)
 
 [Hosted on Heroku](http://ka-ring.herokuapp.com)
 
