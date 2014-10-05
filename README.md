@@ -8,7 +8,6 @@ My homepage powered by Clojure.
 
 ## License
 
-* Program sources: [MIT](http://opensource.org/licenses/MIT)
-* Documents: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+[MIT](http://opensource.org/licenses/MIT)
 
 Copyright (C) 2014 ka
