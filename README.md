@@ -28,4 +28,4 @@ Ref. [Migrating to the Celadon Cedar-14 Stack | Heroku Dev Center](https://devce
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (C) 2014 ka
+Copyright (C) 2014-2015 ka
