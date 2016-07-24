@@ -13,13 +13,9 @@
 
 (defn- deploy []
   (shell/sh "mkdir" "target")
-  (shell/sh "cp" "-r" "resources/public/css" "target")
-  (shell/sh "cp" "-r" "resources/public/fonts" "target")
-  (shell/sh "cp" "-r" "resources/public/img" "target")
-  (shell/sh "cp" "-r" "resources/public/js" "target")
-  (shell/sh "cp" "-r" "resources/public/log" "target")
-  (shell/sh "cp" "-r" "resources/public/stylesheets" "target")
-  (shell/sh "cp" "-r" "resources/public/tgk" "target"))
+  (map
+    #(shell/sh "cp" "-r" (str "resources/public/" %1) "target")
+    ["css" "fonts" "img" "js" "log" "stylesheets" "tgk"]))
 
 (defn -main
   "Generate static pages and deploy them."
