@@ -1,7 +1,7 @@
 (defproject kaosfield "0.1.0"
   :description "kaosfield"
   :url "http://ka-ring.herokuapp.com"
-  :dependencies [[org.clojure/clojure "1.7.0-alpha4"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [lib-noir "0.8.4"]
                  [compojure "1.1.8"]
                  [ring-server "0.3.1"]
