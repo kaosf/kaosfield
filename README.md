@@ -8,4 +8,4 @@ My homepage powered by Clojure and AWS S3.
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (C) 2014-2015 ka
+Copyright (C) 2014-2016 ka
