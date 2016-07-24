@@ -1,2 +1,3 @@
-mkdir -p target/s3
+mkdir -p target
+cd target
 npm install crypto-js@3.1.6
