@@ -11,15 +11,8 @@
 
 (def target-dir "target/site")
 
-(defn- copy-resources []
-  (shell/sh "mkdir" "-p" target-dir)
-  (map
-    #(shell/sh "cp" "-r" (str "resources/public/" %1) target-dir)
-    ["css" "fonts" "img" "js" "log" "stylesheets" "tgk"]))
-
 (defn -main
   "Generate static pages and copy resources (assets)"
   []
   (stasis/empty-directory! target-dir)
-  (stasis/export-pages pages target-dir)
-  (copy-resources))
+  (stasis/export-pages pages target-dir))
