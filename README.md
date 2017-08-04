@@ -6,6 +6,8 @@ My site powered by Clojure.
 
 ## Note for update
 
+Copy `deploy.sh.example` to `deploy.sh` and modify it.
+
 ```
 bash run.sh
 bash deploy.sh
