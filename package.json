@@ -1,5 +1,22 @@
 {
+  "name": "kaosfield",
+  "version": "1.0.0",
+  "description": "ka's site",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf target && pug src --out target && cp -r static/* target && cp node_modules/crypto-js/crypto-js.js target/js/vendor",
+    "deploy": "bash deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaosfield"
+  },
+  "author": "ka",
+  "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
-    "pug-cli": "1.0.0-alpha6"
+    "crypto-js": "^3.1.6",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }

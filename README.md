@@ -1,20 +1,42 @@
 # kaosfield
 
-My site powered by Clojure.
+My site [kaosfield](https://www.kaosfield.net) contents and builder for distribution.
 
-[kaosfield](http://www.kaosfield.net)
+Build with:
 
-## Note for update
+- [pug](https://pugjs.org/)
 
-Copy `deploy.sh.example` to `deploy.sh` and modify it.
+## How to build
 
+Install Node.js.
+
+```sh
+nodenv install 13.8.0
+# or any other methods as you like.
 ```
-bash run.sh
-bash deploy.sh
+
+Install dependencies.
+
+```sh
+npm i
+```
+
+Build.
+
+```sh
+npm run build
+```
+
+Deployment.
+
+```sh
+cp deploy.sh.example deploy.sh
+# Edit deploy.sh
+npm run deploy
 ```
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Copyright (C) 2014-2017 ka
+Copyright (C) 2001-2020 ka
