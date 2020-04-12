@@ -18,13 +18,13 @@ nodenv install 13.8.0
 Install dependencies.
 
 ```sh
-npm i
+yarn
 ```
 
 Build.
 
 ```sh
-npm run build
+yarn build
 ```
 
 Deployment.
@@ -32,7 +32,7 @@ Deployment.
 ```sh
 cp deploy.sh.example deploy.sh
 # Edit deploy.sh
-npm run deploy
+yarn deploy
 ```
 
 ## License
