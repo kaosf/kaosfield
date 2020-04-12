@@ -8,12 +8,15 @@ Build with:
 
 ## How to build
 
-Install Node.js.
+Install Node.js and Yarn.
 
 ```sh
 nodenv install 13.8.0
 # or any other methods as you like.
 ```
+
+Refer [the official installation guide](https://classic.yarnpkg.com/en/docs/install#debian-stable)
+and install Yarn.
 
 Install dependencies.
 
