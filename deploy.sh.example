@@ -1,1 +1,1 @@
-rsync -avz --delete -e ssh target/* user@host:/path/to/www
+rsync -avzz --delete -e ssh target/* user@host:/path/to/www
