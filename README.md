@@ -33,4 +33,4 @@ npm run deploy
 
 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Copyright (C) 2001-2021 ka
+Copyright (C) 2001-2023 ka
