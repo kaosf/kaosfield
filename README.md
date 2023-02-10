@@ -8,27 +8,17 @@ Build with:
 
 ## How to build
 
-Install Node.js and Yarn.
+Install Node.js and dependencies.
 
 ```sh
-asdf install nodejs 13.8.0
-asdf local nodejs 13.8.0
-npm i -g yarn
-```
-
-Refer [the official installation guide](https://classic.yarnpkg.com/en/docs/install#debian-stable)
-and install Yarn.
-
-Install dependencies.
-
-```sh
-yarn
+asdf install
+npm i
 ```
 
 Build.
 
 ```sh
-yarn build
+npm run build
 ```
 
 Deployment.
@@ -36,7 +26,7 @@ Deployment.
 ```sh
 cp deploy.sh.example deploy.sh
 # Edit deploy.sh
-yarn deploy
+npm run deploy
 ```
 
 ## License
