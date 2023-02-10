@@ -4,7 +4,7 @@
   "description": "ka's site",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf target && pug src --out target && cp -r static/* target",
+    "build": "rm -rf target/* && pug src --out target && cp -r static/* target",
     "deploy": "bash deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
