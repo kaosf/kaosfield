@@ -1,3 +1,3 @@
 DST=user@host:/path/to/www
-rsync -avzz --delete -e ssh target/* ${DST}
-rsync -avzz --delete -e ssh target/.well-known ${DST}
+rsync -acvz --delete -e ssh target/* ${DST}
+rsync -acvz --delete -e ssh target/.well-known ${DST}

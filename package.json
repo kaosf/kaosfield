@@ -4,8 +4,8 @@
   "description": "ka's site",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf target/* target/.well-known && pug3 src --out target && cp -r static/* target && cp -r static/.well-known target",
-    "deploy": "bash deploy.sh",
+    "build": "bash build.sh",
+    "deploy": "test -f deploy.sh && bash deploy.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

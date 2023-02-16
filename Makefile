@@ -5,4 +5,4 @@ test:
 	echo Do nothing.
 
 release:
-	test -f deploy.sh && bash deploy.sh
+	npm run deploy
