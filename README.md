@@ -1,6 +1,6 @@
 # kaosfield
 
-My site [kaosfield](https://www.kaosfield.net) contents and builder for distribution.
+My site [kaosfield](https://www.kaosfield.net/) contents and builder for distribution.
 
 Build with:
 
