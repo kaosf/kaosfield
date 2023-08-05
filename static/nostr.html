@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Nostr</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #303742;
+        color: #b7b7b7;
+      }
+      a {
+        color: #7775f9;
+      }
+      a:visited {
+        color: #a7a6fb;
+      }
+    }
+    textarea {
+      background-color: #404752;
+      color: #bbb;
+      font-size: 16px;
+    }
+  </style>
+  <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js" defer></script>
+</head>
+<body>
+  <textarea id="ta" rows="10" cols="140" autofocus></textarea>
+  <!-- TODO: Fix for Markuplint warnings -->
+
+<script>
+let relays = null;
+let pool = null;
+let pubkey = null;
+window.addEventListener("DOMContentLoaded", () => {
+  // TODO: DOMContentLoaded is correct?
+  document.onkeydown = async (e) => {
+    // TODO: Fix this deep indentation
+    if (e.ctrlKey) {
+      if (e.keyCode == 13 /* Enter */) {
+        const elem = document.getElementById("ta");
+        if (elem.value !== "") {
+          const content = elem.value;
+          elem.value = "";
+
+          if (pubkey === null && window.nostr) {
+            pubkey = await window.nostr.getPublicKey();
+          }
+          if (pubkey === null) {
+            console.log("A public key doesn't exist.")
+            return;
+          }
+          console.log(pubkey);
+
+          if ((relays === null || pool === null) && window.NostrTools && window.nostr) {
+            relays = Object.keys(await window.nostr.getRelays());
+            pool = new window.NostrTools.SimplePool();
+            pool.sub(relays, [
+              { authors: [pubkey] } // ???? TODO: research about this setting.
+            ]);
+          }
+          if (relays === null || pool === null) {
+            console.log("relays is null or pool is null.")
+            return;
+          }
+          console.log(relays);
+          console.log(pool);
+
+          let event = {
+            kind: 1,
+            created_at: Math.floor(Date.now() / 1000),
+            tags: [],
+            content,
+            pubkey
+          }
+          event.id = window.NostrTools.getEventHash(event)
+          event = await window.nostr.signEvent(event);
+          console.log(event);
+
+          pool.publish(relays, event);
+        }
+      }
+    }
+  }
+});
+// ref.
+// - https://github.com/nbd-wtf/nostr-tools
+// - https://github.com/fiatjaf/nos2x
+</script>
+
+</body>
+</html>
