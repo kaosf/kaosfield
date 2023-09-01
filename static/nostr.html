@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event = await window.nostr.signEvent(event);
       console.log(event);
 
-      pool.publish(relays, event);
+      await Promise.allSettled(pool.publish(relays, event));
     }
   }
 });
