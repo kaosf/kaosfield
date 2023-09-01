@@ -34,52 +34,47 @@ let pool = null;
 let pubkey = null;
 document.addEventListener("DOMContentLoaded", () => {
   // TODO: DOMContentLoaded is correct?
+  const elem = document.getElementById("ta");
   document.onkeydown = async (e) => {
-    // TODO: Fix this deep indentation
-    if (e.ctrlKey) {
-      if (e.keyCode == 13 /* Enter */) {
-        const elem = document.getElementById("ta");
-        if (elem.value !== "") {
-          const content = elem.value;
-          elem.value = "";
+    if (e.ctrlKey && e.keyCode == 13 /* Enter */ && elem.value !== "") {
+      const content = elem.value;
+      elem.value = "";
 
-          if (pubkey === null && window.nostr) {
-            pubkey = await window.nostr.getPublicKey();
-          }
-          if (pubkey === null) {
-            console.log("A public key doesn't exist.")
-            return;
-          }
-          console.log(pubkey);
-
-          if ((relays === null || pool === null) && window.NostrTools && window.nostr) {
-            relays = Object.keys(await window.nostr.getRelays());
-            pool = new window.NostrTools.SimplePool();
-            pool.sub(relays, [
-              { authors: [pubkey] } // ???? TODO: research about this setting.
-            ]);
-          }
-          if (relays === null || pool === null) {
-            console.log("relays is null or pool is null.")
-            return;
-          }
-          console.log(relays);
-          console.log(pool);
-
-          let event = {
-            kind: 1,
-            created_at: Math.floor(Date.now() / 1000),
-            tags: [],
-            content,
-            pubkey
-          }
-          event.id = window.NostrTools.getEventHash(event)
-          event = await window.nostr.signEvent(event);
-          console.log(event);
-
-          pool.publish(relays, event);
-        }
+      if (pubkey === null && window.nostr) {
+        pubkey = await window.nostr.getPublicKey();
       }
+      if (pubkey === null) {
+        console.log("A public key doesn't exist.")
+        return;
+      }
+      console.log(pubkey);
+
+      if ((relays === null || pool === null) && window.NostrTools && window.nostr) {
+        relays = Object.keys(await window.nostr.getRelays());
+        pool = new window.NostrTools.SimplePool();
+        pool.sub(relays, [
+          { authors: [pubkey] } // ???? TODO: research about this setting.
+        ]);
+      }
+      if (relays === null || pool === null) {
+        console.log("relays is null or pool is null.")
+        return;
+      }
+      console.log(relays);
+      console.log(pool);
+
+      let event = {
+        kind: 1,
+        created_at: Math.floor(Date.now() / 1000),
+        tags: [],
+        content,
+        pubkey
+      }
+      event.id = window.NostrTools.getEventHash(event)
+      event = await window.nostr.signEvent(event);
+      console.log(event);
+
+      pool.publish(relays, event);
     }
   }
 });
