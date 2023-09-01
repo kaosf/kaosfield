@@ -52,9 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if ((relays === null || pool === null) && window.NostrTools && window.nostr) {
         relays = Object.keys(await window.nostr.getRelays());
         pool = new window.NostrTools.SimplePool();
-        pool.sub(relays, [
-          { authors: [pubkey] } // ???? TODO: research about this setting.
-        ]);
       }
       if (relays === null || pool === null) {
         console.log("relays is null or pool is null.")
