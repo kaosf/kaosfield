@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  div
+    button(data-npub="npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza") Zap⚡
+    button(data-nzv-id="npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza" data-relay-urls="wss://relay.nostr.band,wss://relay.damus.io,wss://nos.lol,wss://nostr.bitcoiner.social,wss://relay.nostr.wirednet.jp,wss://yabu.me") View zaps 👀
+  script(src="https://cdn.jsdelivr.net/npm/nostr-zap@0.21.0" integrity="sha256-aNwQ6XB7ijBBaMepS4a1B+axb5Ur5YyhNqPCgBOzccg=" crossorigin="anonymous")
+  script(src="https://cdn.jsdelivr.net/npm/nostr-zap-view@1" integrity="sha256-FOeRzGrkIgBlunaJMfJ5IOSS1I5CFDfDZsgc1rXy1GA=" crossorigin="anonymous")
+  ul
+    li
+      a(href="https://bitcoiner.guide/zap/") What's Zap?
+    li
+      a(href="https://scrapbox.io/nostr/Zap") Zapとは？
+  div
+    a(href="/") Back to index
