@@ -1,15 +1,1 @@
-body {
-  padding: 0 20px;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #303742;
-    color: #b7b7b7;
-  }
-  a {
-    color: #7775f9;
-  }
-  a:visited {
-    color: #a7a6fb;
-  }
-}
+body{padding:0 20px}@media (prefers-color-scheme:dark){body{background-color:#303742;color:#b7b7b7}a{color:#7775f9}a:visited{color:#a7a6fb}}
