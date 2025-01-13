@@ -16,6 +16,7 @@
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
     "@anduh/pug-cli": "1.0.0-alpha8",
+    "css-minify": "^2.0.2",
     "pug": "^3.0.3"
   }
 }
