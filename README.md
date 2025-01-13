@@ -29,6 +29,20 @@ cp deploy.sh.example deploy.sh
 npm run deploy
 ```
 
+## How to inline CSS and image
+
+```sh
+npx css-minify -f static/stylesheets/style.css -o . && cat style.min.css && rm -f style.min.css
+```
+
+Inline it into `<style>...here...</style>`.
+
+```sh
+base64 static/icon.webp | tr -d '\n'
+```
+
+Inline it into `<img src="data:image/webp;base64,...here..."></img>`.
+
 ## License
 
 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
