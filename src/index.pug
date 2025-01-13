@@ -1,152 +1,158 @@
-extends _layout
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    title kaosfield
+    style body{padding:0 8px}@media (prefers-color-scheme:dark){body{background-color:#303742;color:#b7b7b7}a{color:#7775f9}a:visited{color:#a7a6fb}}
+  body
+    block content
+    h1 kaosfield
 
-block content
-  h1 kaosfield
+    h2 profile
+    a(href="icon.webp")
+      img.icon(src="data:image/webp;base64,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", alt="icon", width=150, height=150)
+    dl
+      dt name
+      dd ka (か)
+      dt email
+      dd ka.kaosf@gmail.com
+      dt birthday
+      dd 1986-11-21
 
-  h2 profile
-  a(href="icon.webp")
-    img.icon(src="icon.webp", alt="icon", width=150, height=150)
-  dl
-    dt name
-    dd ka (か)
-    dt email
-    dd ka.kaosf@gmail.com
-    dt birthday
-    dd 1986-11-21
+    h2 Nostr
+    dl
+      dt nostr.json for 
+        a(href="https://github.com/nostr-protocol/nips/blob/master/05.md") NIP-05
+      dd
+        a(href="https://kaosfield.net/.well-known/nostr.json") https://kaosfield.net/.well-known/nostr.json
+      dt hex
+      dd(onclick="this.innerHTML='a6f1f450080b65ba75da8ac7328f91c94f8314b2cc4aa719c516852a29388f0b';this.onclick=null") a6f1f45...9388f0b (tap to extend)
+      dt npub
+      dd(onclick="this.innerHTML='npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza';this.onclick=null") npub15mclg5q...s32dfza (tap to extend)
+    ul
+      li
+        a(href="/nostr/") Nostr kind:1 logs
+      li
+        a(href="https://nostter.app/ka@kaosfield.net") nostter
+      li
+        a(href="https://nostr.com/npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza") nostr.com
+      li
+        a(href="https://nostr.directory/p/ka_") nostr.directory
 
-  h2 Nostr
-  dl
-    dt nostr.json for 
-      a(href="https://github.com/nostr-protocol/nips/blob/master/05.md") NIP-05
-    dd
-      a(href="https://kaosfield.net/.well-known/nostr.json") https://kaosfield.net/.well-known/nostr.json
-    dt hex
-    dd(onclick="this.innerHTML='a6f1f450080b65ba75da8ac7328f91c94f8314b2cc4aa719c516852a29388f0b';this.onclick=null") a6f1f45...9388f0b (tap to extend)
-    dt npub
-    dd(onclick="this.innerHTML='npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza';this.onclick=null") npub15mclg5q...s32dfza (tap to extend)
-  ul
-    li
-      a(href="/nostr/") Nostr kind:1 logs
-    li
-      a(href="https://nostter.app/ka@kaosfield.net") nostter
-    li
-      a(href="https://nostr.com/npub15mclg5qgpdjm5aw63trn9ru3e98cx99je392wxw9z6zj52fc3u9s32dfza") nostr.com
-    li
-      a(href="https://nostr.directory/p/ka_") nostr.directory
-
-  h2 Crypto Addresses
-  dl
-    dt Bitcoin LightningNetwork
-    dd
-      div kaosf@walletofsatoshi.com
-      div
-        a(href="/zap.html") Zap⚡
+    h2 Crypto Addresses
+    dl
+      dt Bitcoin LightningNetwork
+      dd
+        div kaosf@walletofsatoshi.com
+        div
+          a(href="/zap.html") Zap⚡
+          span &nbsp|&nbsp
+          a(href="/crypto-addresses/btcln.png") QR
+      dt Ethereum (and other L2s)
+      dd
+        div(onclick="this.innerHTML='0xCCcbD36fF64628223C3977B7EC8920Fda31734a2';this.onclick=null") 0xCCcbD36fF6...1734a2 (tap to extend)
+        div
+          a(href="/crypto-addresses/ethereum.png") QR
+      dt Litecoin
+      dd
+        a(href="/crypto-addresses/litecoin.txt") Click to show
         span &nbsp|&nbsp
-        a(href="/crypto-addresses/btcln.png") QR
-    dt Ethereum (and other L2s)
-    dd
-      div(onclick="this.innerHTML='0xCCcbD36fF64628223C3977B7EC8920Fda31734a2';this.onclick=null") 0xCCcbD36fF6...1734a2 (tap to extend)
-      div
-        a(href="/crypto-addresses/ethereum.png") QR
-    dt Litecoin
-    dd
-      a(href="/crypto-addresses/litecoin.txt") Click to show
-      span &nbsp|&nbsp
-      a(href="/crypto-addresses/litecoin.png") QR
-    dt Zcash
-    dd
-      a(href="/crypto-addresses/zcash.txt") Click to show
-      span &nbsp|&nbsp
-      a(href="/crypto-addresses/zcash.png") QR
-    dt Monero
-    dd
-      a(href="/crypto-addresses/monero.txt") Click to show
-      span &nbsp|&nbsp
-      a(href="/crypto-addresses/monero.png") QR
-    dt Solana
-    dd
-      div(onclick="this.innerHTML='AVnZasszme6chrNVG8XMmhfJYwBi3rbjHTavCktPvbSv';this.onclick=null") AVnZasszme...tPvbSv (tap to extend)
-      div
-        a(href="/crypto-addresses/solana.png") QR
+        a(href="/crypto-addresses/litecoin.png") QR
+      dt Zcash
+      dd
+        a(href="/crypto-addresses/zcash.txt") Click to show
+        span &nbsp|&nbsp
+        a(href="/crypto-addresses/zcash.png") QR
+      dt Monero
+      dd
+        a(href="/crypto-addresses/monero.txt") Click to show
+        span &nbsp|&nbsp
+        a(href="/crypto-addresses/monero.png") QR
+      dt Solana
+      dd
+        div(onclick="this.innerHTML='AVnZasszme6chrNVG8XMmhfJYwBi3rbjHTavCktPvbSv';this.onclick=null") AVnZasszme...tPvbSv (tap to extend)
+        div
+          a(href="/crypto-addresses/solana.png") QR
 
-  h2 AT Protocol
-  dl
-    dt DID
-    dd https://kaosfield.net/.well-known/atproto-did
-  ul
-    li Bluesky: 
-      a(href="https://bsky.app/profile/kaosfield.net") kaosfield.net
+    h2 AT Protocol
+    dl
+      dt DID
+      dd https://kaosfield.net/.well-known/atproto-did
+    ul
+      li Bluesky: 
+        a(href="https://bsky.app/profile/kaosfield.net") kaosfield.net
 
-  h2 External Services
-  ul
-    li Gravatar: 
-      a(href="https://en.gravatar.com/ka000") ka000
-    li GitHub:
-      ul
-        li
-          a(href="https://github.com/kaosf") kaosf
-        li
-          a(href="https://gist.github.com/kaosf") Gist
-    li Nostr (ZBD sub): 
-      a(href="https://zbd.gg/kaosf") kaosf
-    li CoinOS: 
-      a(href="https://coinos.io/ka") ka@coinos.io
-    li ActivityPub:
-      ul
-        li Mastodon:
-          ul
-            li mstdn.jp: 
-              a(href="https://mstdn.jp/@ka_") ka_@mstdn.jp
-            li precure.ml: 
-              a(href="https://precure.ml/@ka") ka@precure.ml
-            li kirakiratter.com: 
-              a(href="https://kirakiratter.com/@ka") ka@kirakiratter.com
-        li Misskey:
-          ul
-            li misskey.io: 
-              a(href="https://misskey.io/@ka__") @ka__@misskey.io
-            li misskey.cloud: 
-              a(href="https://misskey.cloud/@ka") @ka@misskey.cloud
-            li rhythmisskey: 
-              a(href="https://rhythmisskey.games/@ka") @ka@rhythmisskey.games
-    li OpenSea: 
-      a(href="https://opensea.io/kaosf") kaosf
-    li X:
-      ul
-        li
-          a(href="https://x.com/ka_") ka_
-        li
-          a(href="https://twilog.togetter.com/ka_") Twilog
-    li mixi2: 
-      a(href="https://mixi.social/@ka__") ka__
-    li Tumblr: 
-      a(href="http://kaosf.tumblr.com/") kaosf
-    li Qiita: 
-      a(href="https://qiita.com/ka_") ka_
-    li
-      a(href="https://www.facebook.com/kasu.unko.3") Facebook
-    li Hatena Blog: 
-      a(href="https://kaosf.hatenablog.com/") kaosf
-    li
-      a(href="https://mixi.jp/show_profile.pl?id=347551") mixi
-    li
-      a(href="https://www.amazon.co.jp/gp/wishlist/306YK6EEUT2U") wish list (Amazon)
-    li Bitbucket: 
-      a(href="https://bitbucket.org/kaosf") kaosf
+    h2 External Services
+    ul
+      li Gravatar: 
+        a(href="https://en.gravatar.com/ka000") ka000
+      li GitHub:
+        ul
+          li
+            a(href="https://github.com/kaosf") kaosf
+          li
+            a(href="https://gist.github.com/kaosf") Gist
+      li Nostr (ZBD sub): 
+        a(href="https://zbd.gg/kaosf") kaosf
+      li CoinOS: 
+        a(href="https://coinos.io/ka") ka@coinos.io
+      li ActivityPub:
+        ul
+          li Mastodon:
+            ul
+              li mstdn.jp: 
+                a(href="https://mstdn.jp/@ka_") ka_@mstdn.jp
+              li precure.ml: 
+                a(href="https://precure.ml/@ka") ka@precure.ml
+              li kirakiratter.com: 
+                a(href="https://kirakiratter.com/@ka") ka@kirakiratter.com
+          li Misskey:
+            ul
+              li misskey.io: 
+                a(href="https://misskey.io/@ka__") @ka__@misskey.io
+              li misskey.cloud: 
+                a(href="https://misskey.cloud/@ka") @ka@misskey.cloud
+              li rhythmisskey: 
+                a(href="https://rhythmisskey.games/@ka") @ka@rhythmisskey.games
+      li OpenSea: 
+        a(href="https://opensea.io/kaosf") kaosf
+      li X:
+        ul
+          li
+            a(href="https://x.com/ka_") ka_
+          li
+            a(href="https://twilog.togetter.com/ka_") Twilog
+      li mixi2: 
+        a(href="https://mixi.social/@ka__") ka__
+      li Tumblr: 
+        a(href="http://kaosf.tumblr.com/") kaosf
+      li Qiita: 
+        a(href="https://qiita.com/ka_") ka_
+      li
+        a(href="https://www.facebook.com/kasu.unko.3") Facebook
+      li Hatena Blog: 
+        a(href="https://kaosf.hatenablog.com/") kaosf
+      li
+        a(href="https://mixi.jp/show_profile.pl?id=347551") mixi
+      li
+        a(href="https://www.amazon.co.jp/gp/wishlist/306YK6EEUT2U") wish list (Amazon)
+      li Bitbucket: 
+        a(href="https://bitbucket.org/kaosf") kaosf
 
-  h2 Contents
-  ul
-    li
-      a(href="/log") Old Diary Log - 旧日記ログ (HTML written manually - HTML 直書き, SeleneBach)
-    li
-      a(href="/tgk/index.html") Tougenkyou - やり込みサイト桃源郷コンテンツ (更新停止)
+    h2 Contents
+    ul
+      li
+        a(href="/log") Old Diary Log - 旧日記ログ (HTML written manually - HTML 直書き, SeleneBach)
+      li
+        a(href="/tgk/index.html") Tougenkyou - やり込みサイト桃源郷コンテンツ (更新停止)
 
-  footer
-    p
-      | Source code is 
-      a(href="https://github.com/kaosf/kaosfield") here
-      | .
-    h3 License
-    p
-      a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/") CC BY-NC-SA 4.0
-    p Copyright (C) 2001-2024 ka
+    footer
+      p
+        | Source code is 
+        a(href="https://github.com/kaosf/kaosfield") here
+        | .
+      h3 License
+      p
+        a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/") CC BY-NC-SA 4.0
+      p Copyright (C) 2001-2024 ka
