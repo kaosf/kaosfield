@@ -1,9 +1,6 @@
 body {
   padding: 0 20px;
 }
-img.icon {
-  border-radius: 15px;
-}
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #303742;
