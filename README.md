@@ -47,4 +47,4 @@ Inline it into `<img src="data:image/webp;base64,...here..."></img>`.
 
 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Copyright (C) 2001-2024 ka
+Copyright (C) 2001-2025 ka
